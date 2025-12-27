@@ -4,6 +4,7 @@
 import * as React from 'react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import theme from '../styles/theme';
+import Header from '../components/Header';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   React.useEffect(() => {
@@ -20,6 +21,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <ThemeProvider theme={theme}>
           <CssBaseline />
+          {/* Header */}
+          { /* Header is a client component with MUI AppBar */ }
+          {/* import placed at top */}
+          <Header />
+
           {children}
         </ThemeProvider>
       </body>
